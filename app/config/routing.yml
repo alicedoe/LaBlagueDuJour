@@ -1,0 +1,21 @@
+admin_blague:
+    resource: "@AdminBundle/Controller/BlagueController.php"
+    type:     annotation
+
+admin_categorie:
+    resource: "@AdminBundle/Controller/CategorieController.php"
+    type:     annotation
+
+client:
+    resource: "@ClientBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

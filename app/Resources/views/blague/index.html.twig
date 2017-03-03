@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Blagues list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Texte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for blague in blagues %}
+            <tr>
+                <td><a href="{{ path('blague_show', { 'id': blague.id }) }}">{{ blague.id }}</a></td>
+                <td>{{ blague.texte }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('blague_show', { 'id': blague.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('blague_edit', { 'id': blague.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('blague_new') }}">Create a new blague</a>
+        </li>
+    </ul>
+{% endblock %}
