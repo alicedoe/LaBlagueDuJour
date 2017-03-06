@@ -18,7 +18,7 @@ class BlagueType extends AbstractType
            ->add('texte')
            ->add('categorie', EntityType::class, array(
     'class' => 'AdminBundle:Categorie',
-    'choice_label' => 'nom',));
+    'choice_label' => 'nomv',));
     }
     
     /**
